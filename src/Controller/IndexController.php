@@ -18,7 +18,7 @@ class IndexController extends AbstractController
     }
     
     #[Route('/about/{name}', name: 'app_about')]
-    public function about(string $name): Response
+    public function about(string $name = "user"): Response
     {
         return new Response(content: "Hello ". $name ." !");
     }
